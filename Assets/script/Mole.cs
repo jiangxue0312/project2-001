@@ -20,7 +20,6 @@ public class Mole : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        animator = GetComponent<Animator>();
 
         if (showflag)
         {
@@ -36,7 +35,7 @@ public class Mole : MonoBehaviour {
         Debug.Log("Mole.cs_Show");
         if (showflag) return;
         //animator.SetTrigger("Show");
-        animator.Play("Diglett_show");
+        GetComponent<Animator>().Play("Diglett_show");
         showflag = true;
     }
 
@@ -44,7 +43,7 @@ public class Mole : MonoBehaviour {
     {
         Debug.Log("Mole.cs_Hit");
         showflag = false;
-        animator.Play("Diglett_hit");
+        GetComponent<Animator>().Play("Diglett_hit");
     }
 
     IEnumerator Hide(float timeHide)
@@ -53,7 +52,7 @@ public class Mole : MonoBehaviour {
         showflag = false;
         yield return new WaitForSeconds(timeHide);
 
-        animator.Play("Diglett_hide");
+        GetComponent<Animator>().Play("Diglett_hide");
         //animator.SetTrigger("Hide");
     }
 

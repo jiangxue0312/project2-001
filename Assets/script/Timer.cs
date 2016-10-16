@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
-    private Text timerText;
+    public Text timerText;
 
     private float startTime = 30f;
 
@@ -20,10 +20,13 @@ public class Timer : MonoBehaviour
     {
 
         //startTime -= Time.deltaTime;
-
-        startTime = 300f - Time.time;
-
-        if (startTime < 0)
+        if (startTime > 0)
+        {
+            startTime = 10f - Time.time;
+        }
+        else
+        
+        
         {
             GameOver();
         }
