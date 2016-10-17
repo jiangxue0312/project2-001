@@ -22,7 +22,7 @@
 // Adapted further by Chris Ewin, 23 Sep 2013
 // Adapted for texture/normal mapping in Unity by Alex Zable, 02 Sep 2016
 
-Shader "Unlit/PhongShaderBumpTex"
+Shader "NewShader"
 {
 	SubShader
 	{
