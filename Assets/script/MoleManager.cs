@@ -32,14 +32,14 @@ public class MoleManager : MonoBehaviour {
     {
         
         int random = Random.Range(0, moleList.Count);
-        //int random2 = Random.Range(0, moleList.Count);
-        //while (random == random2)
-        //{
-        //    random2 = Random.Range(0, moleList.Count);
-        //}
+        int random2 = Random.Range(0, moleList.Count);
+        while (random == random2)
+        {
+            random2 = Random.Range(0, moleList.Count);
+        }
         Debug.Log("random: " + random);
-        //Debug.Log("random2: " + random2);
-        //moleList[3].SendMessage("Show");
+        Debug.Log("random2: " + random2);
         moleList[random].GetComponentInChildren<Mole>().Show();
+        moleList[random2].GetComponentInChildren<Mole>().Show();
     }
 }
