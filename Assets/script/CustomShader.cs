@@ -5,26 +5,25 @@ public class CustomShader : MonoBehaviour {
 
     // The shader
     public Shader shader;
-    //public Material material;
-
-
+    public Texture diffuseMap; // This is just our regular texture (more aptly named)
+    public Texture normalMap;
     public PointLight[] pointLights;
+    public Terrain uluru;
+
+   
     private const int MAX_LIGHTS = 10;
 
 
     // Use this for initialization
     void Start () {
-        MeshRenderer Landrender = gameObject.AddComponent<MeshRenderer>();
-        //Landrender.material = material1;
-        Landrender.material.shader = shader;
-
-
+     
+        
         // Add a MeshRenderer component. This component actually renders the mesh that
         // is defined by the MeshFilter component.
         MeshRenderer renderer = this.gameObject.AddComponent<MeshRenderer>();
         renderer.material.shader = shader;
-       // renderer.material.mainTexture = diffuseMap;
-        //renderer.material.SetTexture("_NormalMapTex", normalMap);
+        renderer.material.mainTexture = diffuseMap;
+        renderer.material.SetTexture("_NormalMapTex", normalMap);
 
         // Extension task: set parameters appropriately for a brick wall
         renderer.material.SetFloat("_AmbientCoeff", 1.0f);
