@@ -22,7 +22,7 @@ public class Timer : MonoBehaviour
         //startTime -= Time.deltaTime;
         if (startTime > 0)
         {
-            startTime = 10f - Time.time;
+            startTime = 300f - Time.time;
         }
         else
         

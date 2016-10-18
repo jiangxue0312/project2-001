@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Mole : MonoBehaviour {
 
-    private static Animator animator;
+    //private static Animator animator;
     private bool showflag = false;
 
     private GameObject moles;
@@ -34,8 +34,8 @@ public class Mole : MonoBehaviour {
     {
         Debug.Log("Mole.cs_Show");
         if (showflag) return;
-        //animator.SetTrigger("Show");
-        GetComponent<Animator>().Play("Diglett_show");
+        GetComponent<Animator>().SetTrigger("Show");
+        // GetComponent<Animator>().Play("Diglett_show");
         showflag = true;
     }
 
@@ -44,6 +44,7 @@ public class Mole : MonoBehaviour {
         Debug.Log("Mole.cs_Hit");
         showflag = false;
         GetComponent<Animator>().Play("Diglett_hit");
+        GetComponent<Animator>().SetTrigger("Hit");
     }
 
     IEnumerator Hide(float timeHide)
@@ -52,8 +53,8 @@ public class Mole : MonoBehaviour {
         showflag = false;
         yield return new WaitForSeconds(timeHide);
 
-        GetComponent<Animator>().Play("Diglett_hide");
-        //animator.SetTrigger("Hide");
+        // GetComponent<Animator>().Play("Diglett_hide");
+        GetComponent<Animator>().SetTrigger("Hide");
     }
 
 
