@@ -1,16 +1,21 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
+
 public class Timer : MonoBehaviour
 {
-    public Text timerText;
+    private Text timerText;
 
-    private float startTime = 30f;
+    public GameObject panel;
+
+    public GameObject result;
+
+    private float startTime;
 
     // Use this for initialization
     void Start()
     {
-
+        panel.SetActive(false); 
+        startTime = 5f;
         timerText = GetComponent<Text>();
 
     }
@@ -22,11 +27,9 @@ public class Timer : MonoBehaviour
         //startTime -= Time.deltaTime;
         if (startTime > 0)
         {
-            startTime = 300f - Time.time;
+            startTime -= Time.deltaTime;
         }
         else
-        
-        
         {
             GameOver();
         }
@@ -39,20 +42,9 @@ public class Timer : MonoBehaviour
     {
         Debug.Log("game over");
 
-        if (PointManager.Instance.GetPoint() > 50)
-            Win();
-        else
-            Lose();
+        result.GetComponent<ShowScore>().gameObject.SendMessage("ShowResult", SendMessageOptions.DontRequireReceiver);
 
-    }
+        panel.SetActive(true);
 
-    private void Win()
-    {
-        timerText.text = "You Win!";
-    }
-
-    private void Lose()
-    {
-        timerText.text = "You Lose!";
     }
 }

@@ -27,6 +27,7 @@ public class TabHitting : MonoBehaviour {
             if (target != null)
             {
                 target.SendMessage("Hit");
+                PointManager.Instance.IncrementPoint();
             }
         }
     }
