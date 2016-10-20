@@ -15,7 +15,7 @@ public class Timer : MonoBehaviour
     void Start()
     {
         panel.SetActive(false); 
-        startTime = 5f;
+        startTime = 300f;
         timerText = GetComponent<Text>();
 
     }
