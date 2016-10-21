@@ -42,21 +42,21 @@ public class CameraPosition : MonoBehaviour {
         float posY = transform.position.y;
         float posZ = transform.position.z;
 
-        if (posX < 0)
+        if (posX < 100)
         {
-            posX = 0;
+            posX = 100;
         }
-        if (posZ < 0)
+        if (posZ < 100)
         {
-            posZ = 0;
+            posZ = 100;
         }
-        if (posX > 1000)
+        if (posX > 900)
         {
-            posX = 1000;
+            posX = 900;
         }
-        if (posZ > 1000)
+        if (posZ > 900)
         {
-            posZ = 1000;
+            posZ = 900;
         }
         float height = uluru.terrainData.GetHeight((int)posX, (int)posY);
         //Debug.Log(height);

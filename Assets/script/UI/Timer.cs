@@ -38,8 +38,6 @@ public class Timer : MonoBehaviour
         {
             if (freezeTime)
             {
-                startTime += 2f;
-                addTimePanel.GetComponent<Animator>().SetTrigger("PanelShow");
                 freezeTime = false;
             }
             startTime -= Time.deltaTime;
@@ -66,5 +64,7 @@ public class Timer : MonoBehaviour
     public void AddTime()
     {
         freezeTime = true;
+        startTime += 2f;
+        addTimePanel.GetComponent<Animator>().SetTrigger("PanelShow");
     }
 }
