@@ -34,6 +34,7 @@ public class TabHitting : MonoBehaviour {
                 else if (target.tag == "Prefab/IcedMole")
                 {
                     Timer.Instance.AddTime();
+                    PointManager.Instance.IncrementPoint();
                 }
             }
         }
