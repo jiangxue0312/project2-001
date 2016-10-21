@@ -1,0 +1,52 @@
+1>------ Build started: Project: Assembly-CSharp-firstpass, Configuration: Debug x64 ------
+1>  Running SerializationWeaver...
+1>  Symbols will be read from C:\Users\Comp30019\Desktop\final\Project2\Unprocessed\UnityEngine.pdb
+1>  Symbols will be read from C:\Users\Comp30019\Desktop\NewNew\project2-001\UWP\Assembly-CSharp-firstpass\obj\x64\Debug\x64\Debug\Assembly-CSharp-firstpass.pdb
+1>  WeaveAssemblies unityPath= C:\Users\Comp30019\Desktop\final\Project2\Unprocessed\UnityEngine.dll
+1>  WeaveAssemblies unetPath= C:\Users\Comp30019\Desktop\final\Project2\Unprocessed\UnityEngine.Networking.dll
+1>  Symbols will be read from C:\Users\Comp30019\Desktop\NewNew\project2-001\UWP\Assembly-CSharp-firstpass\obj\x64\Debug\x64\Debug\Assembly-CSharp-firstpass.pdb
+1>  Script Module: Assembly-CSharp-firstpass.dll
+1>  Symbols will be read from C:\Users\Comp30019\Desktop\NewNew\project2-001\UWP\Assembly-CSharp-firstpass\obj\x64\Debug\x64\Debug\Assembly-CSharp-firstpass.pdb
+1>  Weaving assembly C:\Users\Comp30019\Desktop\NewNew\project2-001\UWP\Assembly-CSharp-firstpass\obj\x64\Debug\x64\Debug\Assembly-CSharp-firstpass.dll
+1>  Will export symbols of pdb format
+1>  SerializationWeaver done.
+1>  Assembly-CSharp-firstpass -> C:\Users\Comp30019\Desktop\NewNew\project2-001\UWP\Assembly-CSharp-firstpass\bin\x64\Debug\Assembly-CSharp-firstpass.dll
+2>------ Build started: Project: Assembly-CSharp, Configuration: Debug x64 ------
+2>  Running SerializationWeaver...
+2>  Symbols will be read from C:\Users\Comp30019\Desktop\final\Project2\Unprocessed\UnityEngine.pdb
+2>  Symbols will be read from C:\Users\Comp30019\Desktop\NewNew\project2-001\UWP\Assembly-CSharp\obj\x64\Debug\x64\Debug\Assembly-CSharp.pdb
+2>  WeaveAssemblies unityPath= C:\Users\Comp30019\Desktop\final\Project2\Unprocessed\UnityEngine.dll
+2>  WeaveAssemblies unetPath= C:\Users\Comp30019\Desktop\final\Project2\Unprocessed\UnityEngine.Networking.dll
+2>  Symbols will be read from C:\Users\Comp30019\Desktop\NewNew\project2-001\UWP\Assembly-CSharp\obj\x64\Debug\x64\Debug\Assembly-CSharp.pdb
+2>  Script Module: Assembly-CSharp.dll
+2>  Symbols will be read from C:\Users\Comp30019\Desktop\NewNew\project2-001\UWP\Assembly-CSharp\obj\x64\Debug\x64\Debug\Assembly-CSharp.pdb
+2>  Weaving assembly C:\Users\Comp30019\Desktop\NewNew\project2-001\UWP\Assembly-CSharp\obj\x64\Debug\x64\Debug\Assembly-CSharp.dll
+2>   + CameraPosition
+2>   + CustomShader
+2>   + EndDust
+2>   + StartDust
+2>   + MidpointRotate
+2>   + Mole
+2>   + MoleManager
+2>   + PassArrayToShader
+2>   + PinchZoom
+2>   + PointLight
+2>   + TabHitting
+2>   + PointManager
+2>   + ShowScore
+2>   + Timer
+2>   + UIController
+2>  Will export symbols of pdb format
+2>  SerializationWeaver done.
+2>  Assembly-CSharp -> C:\Users\Comp30019\Desktop\NewNew\project2-001\UWP\Assembly-CSharp\bin\x64\Debug\Assembly-CSharp.dll
+3>------ Build started: Project: Project2, Configuration: Debug x64 ------
+3>  UnityInstallationDir "C:\Program Files\Unity\Editor".
+3>  UnityWSAPlayerDir "C:\Program Files\Unity\Editor\Data\PlaybackEngines\MetroSupport".
+3>  UnityProjectDir "C:\Users\Comp30019\Desktop\NewNew\project2-001".
+3>  Copying unprocessed assemblies...
+3>  Running AssemblyConverter...
+3>  AssemblyConverter done.
+3>C:\Users\Comp30019\Desktop\final\Project2\App.xaml.cs(100,4,100,62): warning CS0618: 'ApplicationView.SuppressSystemOverlays.set' is obsolete: 'Use the TryEnterFullScreen method and IsFullScreenMode property instead of SuppressSystemOverlays. For more info, see MSDN.'
+3>C:\Users\Comp30019\Desktop\final\Project2\MainPage.xaml.cs(36,57,36,81): warning CS0169: The field 'MainPage.onRotationChangedHandler' is never used
+3>  Project2 -> C:\Users\Comp30019\Desktop\final\Project2\bin\x64\Debug\Project2.exe
+========== Build: 3 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
