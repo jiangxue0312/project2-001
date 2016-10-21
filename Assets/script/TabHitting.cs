@@ -27,7 +27,14 @@ public class TabHitting : MonoBehaviour {
             if (target != null)
             {
                 target.SendMessage("Hit");
-                PointManager.Instance.IncrementPoint();
+                if (target.tag == "Prefab/Moles")
+                {
+                    PointManager.Instance.IncrementPoint();
+                }
+                else if (target.tag == "Prefab/IcedMole")
+                {
+                    Timer.Instance.AddTime();
+                }
             }
         }
     }
@@ -42,10 +49,14 @@ public class TabHitting : MonoBehaviour {
 
         if (Physics.Raycast(ray, out hit))
         {
-            Debug.Log("out");
             if (hit.collider.tag == "Prefab/Moles")
             {
                 Debug.Log("hit");
+                touchObj = hit.collider.gameObject;
+            }
+            else if (hit.collider.tag == "Prefab/IcedMole")
+            {
+                Debug.Log("froze");
                 touchObj = hit.collider.gameObject;
             }
         }

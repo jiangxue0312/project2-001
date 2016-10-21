@@ -9,14 +9,23 @@ public class Timer : MonoBehaviour
 
     public GameObject result;
 
+    public GameObject addTimePanel;
+
     private float startTime;
+
+    public static Timer Instance;
+
+
+    bool freezeTime;
 
     // Use this for initialization
     void Start()
     {
+        freezeTime = false;
         panel.SetActive(false); 
         startTime = 300f;
         timerText = GetComponent<Text>();
+        Instance = this;
 
     }
 
@@ -27,6 +36,12 @@ public class Timer : MonoBehaviour
         //startTime -= Time.deltaTime;
         if (startTime > 0)
         {
+            if (freezeTime)
+            {
+                startTime += 2f;
+                addTimePanel.GetComponent<Animator>().SetTrigger("PanelShow");
+                freezeTime = false;
+            }
             startTime -= Time.deltaTime;
         }
         else
@@ -46,5 +61,10 @@ public class Timer : MonoBehaviour
 
         panel.SetActive(true);
 
+    }
+
+    public void AddTime()
+    {
+        freezeTime = true;
     }
 }

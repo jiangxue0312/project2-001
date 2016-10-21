@@ -12,7 +12,7 @@ public class ShowScore : MonoBehaviour {
 	
 	public void ShowResult () {
         int score = PointManager.Instance.GetPoint();
-        endText.text = "Congratulations! You have completed the whack a mole game.\n" +
+        endText.text = "Congratulations! You have completed the whack a mole game.\n\n" +
             "Your final score is " + score + ".Thank you!";
 
     }
