@@ -23,7 +23,7 @@ public class Timer : MonoBehaviour
     {
         freezeTime = false;
         panel.SetActive(false); 
-        startTime = 300f;
+        startTime = 100f;
         timerText = GetComponent<Text>();
         Instance = this;
 
@@ -64,7 +64,7 @@ public class Timer : MonoBehaviour
     public void AddTime()
     {
         freezeTime = true;
-        startTime += 2f;
+        startTime += 10f;
         addTimePanel.GetComponent<Animator>().SetTrigger("PanelShow");
     }
 }

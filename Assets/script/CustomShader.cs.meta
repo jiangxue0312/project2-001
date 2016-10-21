@@ -1,10 +1,14 @@
 fileFormatVersion: 2
 guid: bf2b4516b00d6214d968b2f4891dad7f
-timeCreated: 1476582443
+timeCreated: 1477020176
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - shader: {fileID: 4800000, guid: e0913fd4899a71743bb541f1e4ab7559, type: 3}
+  - diffuseMap: {fileID: 2800000, guid: a86712c067161d34c95222cd04904fef, type: 3}
+  - normalMap: {fileID: 2800000, guid: f330c95dd53beab42b67abfa8f312297, type: 3}
+  - meshrock: {fileID: 4300000, guid: 60f028e7a1b594a4bac0ffeaea1dec3c, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
