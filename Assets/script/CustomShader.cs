@@ -8,16 +8,22 @@ public class CustomShader : MonoBehaviour {
     public Texture diffuseMap; // This is just our regular texture (more aptly named)
     public Texture normalMap;
     public PointLight[] pointLights;
-    public Terrain uluru;
+    public Mesh meshrock;
+    public float AmbientCoeff = 1.0f;
+    public float DiffuseCoeff = 1.0f;
+    public float SpecularCoeff = 0.15f;
+    public float SpecularPower = 15.0f;
 
-   
+
+
     private const int MAX_LIGHTS = 10;
 
 
     // Use this for initialization
     void Start () {
-     
-        
+
+        MeshFilter Mesh = this.gameObject.AddComponent<MeshFilter>();
+        Mesh.mesh = meshrock;
         // Add a MeshRenderer component. This component actually renders the mesh that
         // is defined by the MeshFilter component.
         MeshRenderer renderer = this.gameObject.AddComponent<MeshRenderer>();
@@ -26,10 +32,10 @@ public class CustomShader : MonoBehaviour {
         renderer.material.SetTexture("_NormalMapTex", normalMap);
 
         // Extension task: set parameters appropriately for a brick wall
-        renderer.material.SetFloat("_AmbientCoeff", 1.0f);
-        renderer.material.SetFloat("_DiffuseCoeff", 1.0f);
-        renderer.material.SetFloat("_SpecularCoeff", 0.15f);
-        renderer.material.SetFloat("_SpecularPower", 15.0f);
+        renderer.material.SetFloat("_AmbientCoeff", AmbientCoeff);
+        renderer.material.SetFloat("_DiffuseCoeff", DiffuseCoeff);
+        renderer.material.SetFloat("_SpecularCoeff", SpecularCoeff);
+        renderer.material.SetFloat("_SpecularPower", SpecularPower);
 
     }
 	
